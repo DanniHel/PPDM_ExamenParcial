@@ -2,4 +2,12 @@
     <string name="app_name">ParcialJuegoColores</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lbl_tituloWelcome">RGBattle</string>
+    <string name="lbl_btnReglas">Reglas</string>
+    <string name="lbl_btnIniciar">Iniciar Juego</string>
+    <string name="lbl_icImg">Logo del juego</string>
+    <string name="lbl_puntaje">Puntaje: 0</string>
+    <string name="lbl_temporizador">30s</string>
+    <string name="lbl_Puntaje2">Tu puntaje: 0</string>
+    <string name="lbl_btnJugarOtraVez">Jugar otra vez</string>
 </resources>
