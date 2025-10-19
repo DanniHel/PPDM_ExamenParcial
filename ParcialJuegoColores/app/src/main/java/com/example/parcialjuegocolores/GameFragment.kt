@@ -1,8 +1,10 @@
 package com.example.parcialjuegocolores
 
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.View
+import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -34,6 +36,10 @@ class GameFragment : Fragment(R.layout.fragment_game) {
         tvPuntaje = view.findViewById(R.id.tvPuntaje)
         tvTiempo = view.findViewById(R.id.tvTiempo)
 
+        // Animación de rotación
+        val rotate = AnimationUtils.loadAnimation(requireContext(), R.anim.rotate)
+        vColor.startAnimation(rotate)
+
         // Botones de colores
         val btnRojo = view.findViewById<Button>(R.id.btnRojo)
         val btnVerde = view.findViewById<Button>(R.id.btnVerde)
@@ -60,10 +66,31 @@ class GameFragment : Fragment(R.layout.fragment_game) {
         if (colorSeleccionado == colorActual) {
             puntaje++
             tvPuntaje.text = "Puntaje: $puntaje"
+
+            //Reproduce sonido de acierto
+            val sonidoCorrecto = MediaPlayer.create(requireContext(), R.raw.correct)
+            sonidoCorrecto.start()
+
+
+
+            // Libera el reproductor cuando termina
+            sonidoCorrecto.setOnCompletionListener {
+                it.release()
+            }
+
             Toast.makeText(requireContext(), "¡Correcto!", Toast.LENGTH_SHORT).show()
+
         } else {
-            Toast.makeText(requireContext(), "Incorrecto 😅", Toast.LENGTH_SHORT).show()
+            // Reproduce sonido de error
+            val sonidoError = MediaPlayer.create(requireContext(), R.raw.incorrect)
+            sonidoError.start()
+            sonidoError.setOnCompletionListener {
+                it.release()
+            }
+
+            Toast.makeText(requireContext(), "Incorrecto", Toast.LENGTH_SHORT).show()
         }
+
         generarNuevoColor()
     }
 

@@ -20,4 +20,17 @@
         ¡Buena suerte!
     </string>
 
+
+    <string name="rojo">Rojo</string>
+    <string name="verde">Verde</string>
+    <string name="azul">Azul</string>
+    <string name="amarillo">Amarillo</string>
+    <string name="descripcion_color">Vista que muestra el color actual</string>
+    <string name="btn_rojo_desc">Botón para seleccionar el color rojo</string>
+    <string name="btn_verde_desc">Botón para seleccionar el color verde</string>
+    <string name="btn_azul_desc">Botón para seleccionar el color azul</string>
+    <string name="btn_amarillo_desc">Botón para seleccionar el color amarillo</string>
+
+
+
 </resources>
