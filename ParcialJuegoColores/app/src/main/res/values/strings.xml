@@ -10,4 +10,14 @@
     <string name="lbl_temporizador">30s</string>
     <string name="lbl_Puntaje2">Tu puntaje: 0</string>
     <string name="lbl_btnJugarOtraVez">Jugar otra vez</string>
+    <string name="lbl_mejorPuntos">Mejor: 0</string>
+
+    <string name="reglas_juego">
+        1. Aparecerá un color aleatorio en pantalla.\n\n
+        2. Debes presionar el botón del color que coincida.\n\n
+        3. Cada acierto suma un punto.\n\n
+        4. Tienes 30 segundos para lograr la mayor cantidad de aciertos.\n\n
+        ¡Buena suerte!
+    </string>
+
 </resources>

@@ -7,49 +7,92 @@
     android:padding="16dp"
     tools:context=".GameFragment">
 
+    <!-- Puntuación -->
     <TextView
-        android:id="@+id/tvTimer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/lbl_temporizador"
-        android:textSize="18sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <TextView
-        android:id="@+id/tvScore"
+        android:id="@+id/tvPuntaje"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/lbl_puntaje"
-        android:textSize="18sp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
 
+    <!-- Temporizador -->
+    <TextView
+        android:id="@+id/tvTiempo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_temporizador"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Cuadro que muestra el color -->
     <View
-        android:id="@+id/colorBox"
-        android:layout_width="0dp"
-        android:layout_height="180dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/tvScore"
+        android:id="@+id/vColor"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="48dp"
+        android:background="#FF0000"
+        app:layout_constraintTop_toBottomOf="@+id/tvPuntaje"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Botones de colores -->
     <GridLayout
-        android:id="@+id/btnGrid"
-        android:layout_width="0dp"
+        android:id="@+id/gridButtons"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
         android:columnCount="2"
         android:rowCount="2"
-        app:layout_constraintTop_toBottomOf="@id/colorBox"
+        app:layout_constraintTop_toBottomOf="@+id/vColor"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp">
+        app:layout_constraintEnd_toEndOf="parent">
 
-        <Button android:id="@+id/btnRed" android:layout_width="0dp" android:layout_height="80dp" android:text="Rojo" android:layout_row="0" android:layout_column="0"/>
-        <Button android:id="@+id/btnGreen" android:layout_width="0dp" android:layout_height="80dp" android:text="Verde" android:layout_row="0" android:layout_column="1"/>
-        <Button android:id="@+id/btnBlue" android:layout_width="0dp" android:layout_height="80dp" android:text="Azul" android:layout_row="1" android:layout_column="0"/>
-        <Button android:id="@+id/btnYellow" android:layout_width="0dp" android:layout_height="80dp" android:text="Amarillo" android:layout_row="1" android:layout_column="1"/>
+        <Button
+            android:id="@+id/btnRojo"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:backgroundTint="#F44336"
+            android:text="Rojo"
+            android:textColor="#FFFFFF"/>
 
+        <Button
+            android:id="@+id/btnVerde"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:backgroundTint="#4CAF50"
+            android:text="Verde"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/btnAzul"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:backgroundTint="#2196F3"
+            android:text="Azul"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/btnAmarillo"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:backgroundTint="#FFEB3B"
+            android:text="Amarillo"
+            android:textColor="#000000"/>
     </GridLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
