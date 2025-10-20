@@ -1,5 +1,18 @@
 # Proyecto: Juego de Colores
 
+---
+
+## Carátula
+
+**Estudiante:** Danny Quispe  
+**Curso:** Programación para Dispositivos Móviles  
+**Profesor:** Josue Miguel Flores Parra  
+**Fecha de entrega:** 19/10/2025  
+**Universidad:** La salle Arequipa  
+**Proyecto:** Examen Parcial – Juego de Colores  
+
+---
+
 ## Introducción
 
 Este proyecto consiste en el desarrollo de una aplicación interactiva para Android utilizando **Kotlin** y **Android Studio**.  
@@ -42,6 +55,7 @@ Durante el desarrollo se implementaron opciones para mejorar la experiencia del 
 
 - Sonidos para aciertos y errores.  
 - Animaciones en los botones y cambios de color.  
+
 ---
 
 ## Conceptos Aplicados
