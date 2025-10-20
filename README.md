@@ -1,91 +1,66 @@
-# Examen Parcial: Juego de Colores
+# Proyecto: Juego de Colores
 
+## Introducción
 
+Este proyecto consiste en el desarrollo de una aplicación interactiva para Android utilizando **Kotlin** y **Android Studio**.  
 
-Desarrolla una aplicación usando Kotlin y Android Studio. El juego pondrá a prueba tu capacidad de crear una app interactiva con múltiples fragments, navegación, gestión de estados del ciclo de vida, interacción avanzada con RecyclerView, manejo de diálogos, lógica condicional y elementos visuales.
-
-
-
----
-
-
-
-## Objetivo
-
-
-
-Crear un juego donde el usuario debe presionar el botón que coincida con el color que aparece en pantalla.  
-
-El objetivo es obtener la mayor cantidad de aciertos en **30 segundos** y mostrar el historial de puntajes en la sesión (sin usar base de datos).
-
-
+El objetivo del juego es que el usuario identifique correctamente el color mostrado en pantalla, presionando el botón correspondiente, dentro de un tiempo límite de 30 segundos. La aplicación pone a prueba habilidades de diseño de interfaces, navegación entre fragments, gestión de estados del ciclo de vida, y la integración de elementos visuales y sonoros.
 
 ---
 
+## Descripción de la Aplicación
 
+La aplicación se compone de tres fragments principales:
 
-## Componentes de la Aplicación
+### 1. Fragmento de Bienvenida
 
+- Presenta el **título del juego** y un mensaje de bienvenida.  
+- Explica las **reglas del juego** mediante un cuadro de diálogo (**AlertDialog**).  
+- Incluye un botón **“Iniciar juego”** que lleva al usuario al fragmento de juego.  
+- La interfaz puede incluir imágenes o elementos decorativos que mejoran la experiencia visual.
 
+### 2. Fragmento del Juego
 
-### 1. Fragmento de Bienvenida (WelcomeFragment)
+- Muestra un **cuadro de color aleatorio** que el usuario debe adivinar.  
+- Incluye **botones de colores** como opciones de respuesta.  
+- Cada acierto suma un punto y cambia el color a adivinar.  
+- Temporizador de **30 segundos**, con visualización del puntaje y tiempo restante.  
+- Cuando se agota el tiempo, el juego termina automáticamente y se dirige al fragmento de resultados.
 
-- Mostrar el título del juego.
+### 3. Fragmento de Resultados
 
-- Mensaje de bienvenida y reglas del juego mediante un **AlertDialog**.
-
-- Botón “Iniciar juego” para comenzar.
-
-- Interfaz libre que puede incluir imágenes o elementos decorativos.
-
-
-
-### 2. Fragmento del Juego (GameFragment)
-
-- Cuadro que muestra un color aleatorio a adivinar (rojo, verde, azul, amarillo, etc.).
-
-- Botones de colores para responder.
-
-- Cada acierto suma un punto y cambia el color.
-
-- Temporizador de 30 segundos.
-
-- Mostrar puntaje actual y tiempo restante.
-
-- El juego finaliza al agotarse el tiempo.
-
-
-
-### 3. Fragmento de Resultados (ResultFragment)
-
-- Mostrar el puntaje final de la partida actual.
-
-- Mostrar el puntaje más alto histórico (usando **SharedPreferences**).
-
-- RecyclerView para mostrar el historial de puntajes de la sesión (sin persistencia).
-
-- Botón para volver a jugar.
-
-
+- Muestra el **puntaje final** de la partida.  
+- Presenta el **puntaje más alto histórico** de la sesión, almacenado mediante **SharedPreferences**.  
+- Incluye un **historial de puntajes** de la sesión en un **RecyclerView**.  
+- Botón para **volver a jugar**, reiniciando el juego.
 
 ---
 
+## Funcionalidades Adicionales
 
+Durante el desarrollo se implementaron opciones para mejorar la experiencia del usuario, incluyendo:
 
-## Funcionalidades Adicionales (obligatorio elegir al menos una)
+- Sonidos para aciertos y errores.  
+- Animaciones en los botones y cambios de color.  
+---
 
+## Conceptos Aplicados
 
+Este proyecto demuestra la aplicación de diversos conceptos de desarrollo Android:
 
-* Sonidos al juego (aciertos, errores, música de fondo).  
-* Guardar el historial de puntajes usando **Room**, recuperar el puntaje más alto con consultas.  
-* Animaciones para botones o colores que aparecen.  
-* Niveles de dificultad (por ejemplo, efecto Stroop, aumento de colores, etc.).
-
-
+- Navegación entre fragments y paso de datos.  
+- Uso de temporizador con **CountDownTimer**.  
+- Interacción con botones y retroalimentación visual y sonora.  
+- Gestión de estados del ciclo de vida de los fragments.  
+- Diseño de interfaz con **ConstraintLayout** adaptada a distintos tamaños de pantalla.  
+- Uso de recursos de Android (**strings**, **colors**, imágenes, sonidos).  
+- Almacenamiento temporal de datos mediante **SharedPreferences**.  
+- Implementación de diálogos interactivos con **AlertDialog**.  
 
 ---
 
+## Conclusión
 
+El **Juego de Colores** combina entretenimiento con una demostración práctica de desarrollo Android, integrando lógica de programación, diseño de interfaz, interacción del usuario y almacenamiento de datos de manera eficiente.  
 
-
-
+El proyecto cumple con los objetivos del examen parcial, ofreciendo una experiencia de usuario atractiva y funcional, y sirviendo como ejemplo de buenas prácticas en **Kotlin** y desarrollo de aplicaciones móviles.
