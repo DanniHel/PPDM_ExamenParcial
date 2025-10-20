@@ -46,6 +46,12 @@ class GameFragment : Fragment(R.layout.fragment_game) {
         val btnAzul = view.findViewById<Button>(R.id.btnAzul)
         val btnAmarillo = view.findViewById<Button>(R.id.btnAmarillo)
 
+//        btnRojo.setBackgroundResource(R.drawable.bg_btn_rojo)
+//        btnVerde.setBackgroundResource(R.drawable.bg_btn_verde)
+//        btnAzul.setBackgroundResource(R.drawable.bg_btn_azul)
+//        btnAmarillo.setBackgroundResource(R.drawable.bg_btn_amarillo)
+
+
         val botones = listOf(btnRojo, btnVerde, btnAzul, btnAmarillo)
 
         botones.forEach { boton ->
@@ -70,8 +76,6 @@ class GameFragment : Fragment(R.layout.fragment_game) {
             //Reproduce sonido de acierto
             val sonidoCorrecto = MediaPlayer.create(requireContext(), R.raw.correct)
             sonidoCorrecto.start()
-
-
 
             // Libera el reproductor cuando termina
             sonidoCorrecto.setOnCompletionListener {

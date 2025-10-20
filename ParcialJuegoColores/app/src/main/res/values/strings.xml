@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">ParcialJuegoColores</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="lbl_tituloWelcome">RGBattle</string>
     <string name="lbl_btnReglas">Reglas</string>
@@ -31,6 +30,10 @@
     <string name="btn_azul_desc">Botón para seleccionar el color azul</string>
     <string name="btn_amarillo_desc">Botón para seleccionar el color amarillo</string>
 
-
+    <string name="resultado_titulo">Resultado del Juego</string>
+    <string name="puntaje_final_placeholder">Puntaje final: 0</string>
+    <string name="puntaje_maximo_placeholder">Puntaje más alto: 0</string>
+    <string name="historial_titulo">Historial de partidas</string>
+    <string name="btn_volver">Volver a jugar</string>
 
 </resources>

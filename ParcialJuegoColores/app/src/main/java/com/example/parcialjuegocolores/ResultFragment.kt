@@ -20,7 +20,7 @@ class ResultFragment : Fragment(R.layout.fragment_result) {
     private lateinit var btnVolver: Button
 
     companion object {
-        // ✅ Lista en memoria para almacenar historial de la sesión
+        // Lista en memoria para almacenar historial de la sesión
         private val historialPuntajes = mutableListOf<Int>()
     }
 
@@ -32,31 +32,31 @@ class ResultFragment : Fragment(R.layout.fragment_result) {
         rvHistorial = view.findViewById(R.id.rvHistorial)
         btnVolver = view.findViewById(R.id.btnVolver)
 
-        // ✅ Obtener el puntaje final desde argumentos
+        // Obtener el puntaje final desde argumentos
         val puntajeFinal = arguments?.getInt("puntajeFinal") ?: 0
 
-        // ✅ Mostrar puntaje final
+        // Mostrar puntaje final
         tvPuntajeFinal.text = "Puntaje final: $puntajeFinal"
 
-        // ✅ Guardar puntaje en historial de sesión
+        // Guardar puntaje en historial de sesión
         historialPuntajes.add(0, puntajeFinal) // lo más reciente primero
 
-        // ✅ Configurar RecyclerView
+        // Configurar RecyclerView
         rvHistorial.layoutManager = LinearLayoutManager(requireContext())
         rvHistorial.adapter = HistorialAdapter(historialPuntajes)
 
-        // ✅ Manejar SharedPreferences para puntaje más alto
+        // Manejar SharedPreferences para puntaje más alto
         val prefs = requireActivity().getSharedPreferences("JuegoColoresPrefs", Context.MODE_PRIVATE)
         val puntajeMaximo = prefs.getInt("puntajeMaximo", 0)
 
         if (puntajeFinal > puntajeMaximo) {
             prefs.edit().putInt("puntajeMaximo", puntajeFinal).apply()
-            tvPuntajeMaximo.text = "Nuevo récord 🎉: $puntajeFinal"
+            tvPuntajeMaximo.text = "Nuevo récord: $puntajeFinal"
         } else {
             tvPuntajeMaximo.text = "Puntaje más alto: $puntajeMaximo"
         }
 
-        // ✅ Botón volver a jugar
+        // Botón volver a jugar
         btnVolver.setOnClickListener {
             findNavController().navigate(R.id.action_resultFragment_to_welcomeFragment)
         }
@@ -81,6 +81,7 @@ class ResultFragment : Fragment(R.layout.fragment_result) {
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
             val puntaje = puntajes[position]
             holder.tvItem.text = "Partida ${position + 1}: $puntaje puntos"
+            holder.tvItem.setTextColor(android.graphics.Color.BLACK)
         }
 
         override fun getItemCount(): Int = puntajes.size

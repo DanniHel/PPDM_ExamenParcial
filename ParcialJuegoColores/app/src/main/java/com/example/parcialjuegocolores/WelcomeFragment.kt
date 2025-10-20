@@ -14,7 +14,7 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
         val btnIniciarJuego = view.findViewById<Button>(R.id.btnIniciar)
         val btnReglas = view.findViewById<Button>(R.id.btnReglas)
 
-        // ✅ Botón para mostrar las reglas del juego
+        // otón para mostrar las reglas del juego
         btnReglas.setOnClickListener {
             mostrarReglas()
         }
